@@ -11,7 +11,7 @@ export function WingX({ className = "" }: { className?: string }) {
 
 /** The supplied lettering is black. CSS presents its reversed variant on dark surfaces. */
 export function Wordmark({ dark = false }: { dark?: boolean }) {
-  return <span className={`wordmark ${dark ? "wordmark-dark" : "wordmark-reversed"}`} role="img" aria-label="ECAPX"><Image className="logo-base" src="/brand/ecapx.png" width={2172} height={724} alt="" preload /><Image className="logo-orange" src="/brand/ecapx.png" width={2172} height={724} alt="" /></span>;
+  return <span className={`wordmark ${dark ? "wordmark-dark" : "wordmark-reversed"}`} role="img" aria-label="ECAPX"><Image className="logo-base" src="/brand/ecapx.png" width={2172} height={724} alt="" preload /><Image className="logo-orange" src="/brand/ecapx.png" width={2172} height={724} alt="" preload /></span>;
 }
 
 export function MotionGraphic() {
