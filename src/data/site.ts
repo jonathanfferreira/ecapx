@@ -68,6 +68,22 @@ export const projects: readonly Project[] = [
       height: 120,
     },
   },
+  {
+    id: "smile-burger",
+    name: "O Smile Burger",
+    index: "03",
+    category: "EXPERIÊNCIA DIGITAL",
+    headline: "Dá fome antes da primeira mordida.",
+    description: "Website e experiência interativa desenvolvidos pela ECAPX para o Smile Burger, conectando produto, cardápio e conversão.",
+    url: "/work/smile-burger",
+    tags: ["Case study", "Website", "Gastronomia", "Delivery"],
+    logo: {
+      src: "/work/smile-burger/logo.webp",
+      alt: "Logo oficial Smile Burger",
+      width: 440,
+      height: 220,
+    },
+  },
 ];
 
 export const products = projects;
