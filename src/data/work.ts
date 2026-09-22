@@ -10,10 +10,12 @@ export type Work = {
   tags: readonly string[];
   image: string;
   externalUrl?: string;
+  githubUrl?: string;
   caseUrl?: string;
   featured?: boolean;
   client?: string;
   location?: string;
+  badge?: string;
 };
 
 export const works: readonly Work[] = [
@@ -68,6 +70,25 @@ export const works: readonly Work[] = [
     featured: false,
     client: "XPACE",
     location: "Joinville, SC",
+  },
+  {
+    slug: "xpass",
+    index: "000",
+    name: "XPASS",
+    year: "ARCHIVE",
+    category: "Produto Digital / Web Development / Legacy Project",
+    tagline: "Um projeto do início da nossa história digital.",
+    description:
+      "XPASS nasceu antes da ECAPX, como parte das primeiras experiências de criação de produtos digitais dentro do ecossistema XPACE. Anos depois, o projeto foi recuperado e disponibilizado novamente como parte do nosso arquivo — um registro da evolução que ajudou a construir o que hoje se tornou a ECAPX.",
+    industries: ["Fitness & Wellness", "SaaS Multilateral", "Digital Product"],
+    tags: ["Legacy Project", "SaaS Multilateral", "From the Archive", "Vercel"],
+    image: "/work/xpass/hero.webp",
+    externalUrl: "https://xpass-eta.vercel.app/",
+    githubUrl: "https://github.com/jonathanfferreira/xpasse",
+    caseUrl: "/work/xpass",
+    featured: false,
+    location: "Arquivo Digital",
+    badge: "FROM THE ARCHIVE",
   },
 ];
 

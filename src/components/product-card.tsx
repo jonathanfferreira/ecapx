@@ -173,6 +173,42 @@ function ProjectVisual({ project }: { project: Project }) {
     );
   }
 
+  if (project.id === "xpass") {
+    return (
+      <div className="product-visual xpass-visual" aria-hidden="true">
+        <div className="visual-top">
+          <div className="visual-logo-wrap xpass-logo-wrap">
+            <Image
+              src={project.logo.src}
+              alt={project.logo.alt}
+              width={project.logo.width}
+              height={project.logo.height}
+              className="xpass-wordmark-img"
+              priority
+            />
+          </div>
+          <span className="xpass-archive-tag">FROM THE ARCHIVE</span>
+        </div>
+        <div className="xpass-type">
+          Ecossistema fitness<br />
+          <span>multilateral.</span>
+        </div>
+        <div className="xpass-energy-pill">
+          <span className="xpass-pill-dot" />
+          <span>XPASS OS • 3 INTERFACES</span>
+        </div>
+        <div className="xpass-flow">
+          <div><span className="flow-icon"><FlowIcon name="sparkle" /></span>Aluno<span className="flow-dot" /></div>
+          <span className="flow-connector" />
+          <div><span className="flow-icon"><FlowIcon name="layers" /></span>Estúdio<span className="flow-dot" /></div>
+          <span className="flow-connector" />
+          <div><span className="flow-icon"><FlowIcon name="asterisk" /></span>Admin<span className="flow-dot" /></div>
+        </div>
+        <span className="visual-caption">FROM THE ARCHIVE • SAAS</span>
+      </div>
+    );
+  }
+
   return (
     <div className="product-visual company-visual" aria-hidden="true">
       <div className="visual-top">

@@ -84,6 +84,22 @@ export const projects: readonly Project[] = [
       height: 220,
     },
   },
+  {
+    id: "xpass",
+    name: "XPASS",
+    index: "00",
+    category: "FROM THE ARCHIVE",
+    headline: "O início da nossa história digital.",
+    description: "Ecossistema fitness multilateral recuperado como parte do arquivo histórico do ecossistema XPACE.",
+    url: "/work/xpass",
+    tags: ["Legacy Project", "SaaS Multilateral", "Fitness"],
+    logo: {
+      src: "/work/xpass/logo-compact.png",
+      alt: "Logo oficial XPASS",
+      width: 260,
+      height: 64,
+    },
+  },
 ];
 
 export const products = projects;

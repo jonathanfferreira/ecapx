@@ -43,7 +43,7 @@ export default function WorkPage() {
         <section className="work-hero" aria-labelledby="work-hero-title">
           <div className="work-hero-kicker eyebrow">
             <span>SELECTED WORK / PORTFÓLIO</span>
-            <span>03 PROJETOS CONCLUÍDOS</span>
+            <span>04 PROJETOS NO ACERVO</span>
           </div>
           <div className="work-hero-content">
             <h1 id="work-hero-title">
@@ -72,8 +72,8 @@ export default function WorkPage() {
                   width={640}
                   height={400}
                   style={{
-                    objectFit: work.slug === "smile-burger" ? "cover" : "contain",
-                    padding: work.slug === "smile-burger" ? 0 : "36px",
+                    objectFit: work.slug === "smile-burger" || work.slug === "xpass" ? "cover" : "contain",
+                    padding: work.slug === "smile-burger" || work.slug === "xpass" ? 0 : "36px",
                   }}
                   priority={work.featured}
                 />
@@ -83,6 +83,7 @@ export default function WorkPage() {
                 <div className="work-card-kicker">
                   <span className="work-card-num">CASE {work.index}</span>
                   <span className="work-card-year">{work.year}</span>
+                  {work.badge ? <span className="xpass-archive-tag">{work.badge}</span> : null}
                 </div>
 
                 <h2 id={`card-title-${work.slug}`}>{work.name}</h2>
@@ -111,6 +112,20 @@ export default function WorkPage() {
                       aria-label={`Visitar site externo ${work.name} (abre em nova aba)`}
                     >
                       <span>VISITAR SITE</span>
+                      <Arrow diagonal />
+                    </a>
+                  ) : null}
+
+                  {work.githubUrl ? (
+                    <a
+                      href={work.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="button button-outline"
+                      data-track={`work-github-${work.slug}`}
+                      aria-label={`Ver repositório no GitHub do projeto ${work.name} (abre em nova aba)`}
+                    >
+                      <span>GITHUB</span>
                       <Arrow diagonal />
                     </a>
                   ) : null}

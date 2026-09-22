@@ -140,7 +140,7 @@ export default function GoPage() {
         <section aria-labelledby="selected-work-title">
           <div className="go-section-title">
             <span id="selected-work-title">TRABALHOS SELECIONADOS.</span>
-            <span>03 PROJETOS</span>
+            <span>04 PROJETOS</span>
           </div>
 
           <div className="go-works-list">

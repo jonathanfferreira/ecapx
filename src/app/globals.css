@@ -76,7 +76,10 @@ h1>span { color:var(--orange); }
 h2 { font-weight:500; font-size:clamp(2.375rem,4.2vw,4rem); line-height:1.08; letter-spacing:-.058em; margin:0; }
 .muted-heading { color:#7a7a74; }
 .section-heading>p { width:290px; font-size:0.9375rem; line-height:1.75; color:#62625e; margin:0 0 3px; }
-.products-grid, .projects-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:28px; align-items:start; }
+.products-grid, .projects-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:28px; align-items:start; }
+@media (min-width: 1400px) {
+  .products-grid, .projects-grid { grid-template-columns:repeat(4, 1fr); }
+}
 .product-card { min-width:0; }
 .product-card:nth-child(even) { padding-top:0; }
 .product-image-link { display:block; position:relative; }
@@ -131,6 +134,20 @@ h2 { font-weight:500; font-size:clamp(2.375rem,4.2vw,4rem); line-height:1.08; le
 .smile-flow .flow-dot { width:4px; height:4px; border-radius:50%; margin-left:auto; background:#ffb03a; }
 .smile-flow .flow-connector { height:1px; width:10px; background:rgba(255,176,58,.28); }
 .smile-visual .visual-caption { color:rgba(255,176,58,.75); }
+.xpass-visual { background:radial-gradient(circle at 85% 25%, #2a150c 0%, #150e18 45%, #0a0a0c 100%); color:#f4f4f5; }
+.xpass-logo-wrap { display:inline-flex; align-items:center; }
+.xpass-wordmark-img { width:130px; height:auto; display:block; filter:drop-shadow(0 2px 8px rgba(255,82,0,0.3)); }
+.xpass-archive-tag { font-family:var(--font-pt-mono),monospace; font-size:0.6875rem; letter-spacing:.08em; color:var(--orange); border:1px solid #ff520044; background:#ff520015; padding:3px 8px; border-radius:3px; font-weight:700; }
+.xpass-type { font-size:clamp(1.7rem,2.1vw,2.15rem); font-weight:700; letter-spacing:-.055em; line-height:1.04; margin-top:28px; position:relative; z-index:1; }
+.xpass-type>span { color:var(--orange); }
+.xpass-energy-pill { display:inline-flex; align-items:center; gap:8px; margin-top:16px; font-family:var(--font-pt-mono),monospace; font-size:0.6875rem; color:#d4d4d8; background:#ffffff0d; border:1px solid #ffffff1a; padding:6px 12px; border-radius:20px; }
+.xpass-pill-dot { width:6px; height:6px; border-radius:50%; background:var(--orange); box-shadow:0 0 8px var(--orange); }
+.xpass-flow { display:flex; align-items:center; position:absolute; bottom:56px; left:22px; right:22px; }
+.xpass-flow>div { display:flex; gap:6px; align-items:center; justify-content:center; border:1px solid rgba(255,82,0,.25); padding:10px 8px; background:#ffffff08; font-size:0.72rem; flex:1; min-width:0; }
+.xpass-flow .flow-icon { color:var(--orange); }
+.xpass-flow .flow-dot { width:4px; height:4px; border-radius:50%; margin-left:auto; background:var(--orange); }
+.xpass-flow .flow-connector { height:1px; width:10px; background:rgba(255,82,0,.25); }
+.xpass-visual .visual-caption { position:absolute; bottom:20px; left:22px; color:#a1a1aa; font-size:0.6875rem; letter-spacing:.06em; white-space:nowrap; }
 .product-meta { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; margin-top:23px; }
 .product-meta .eyebrow { font-size:0.75rem; color:#65655f; padding-top:5px; }
 .tags { display:flex; gap:5px; flex-wrap:wrap; justify-content:flex-end; }
@@ -230,8 +247,8 @@ summary::-webkit-details-marker { display:none; }
   .products-grid, .projects-grid { grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:25px; }
   .product-visual { height:330px; padding:22px; }
   .visual-top>span:last-child { font-size:0.75rem; }
-  .stage-flow, .company-flow, .smile-flow { left:22px; right:22px; }
-  .stage-flow>div, .company-flow>div, .smile-flow>div { padding:12px 7px; gap:5px; font-size:0.75rem; }
+  .stage-flow, .company-flow, .smile-flow, .xpass-flow { left:22px; right:22px; }
+  .stage-flow>div, .company-flow>div, .smile-flow>div, .xpass-flow>div { padding:12px 7px; gap:5px; font-size:0.75rem; }
   .flow-dot { display:none; }
   .smile-hero-wrap { width:95px; top:75px; right:14px; }
   .product-meta { flex-direction:column; gap:8px; }
@@ -284,13 +301,15 @@ summary::-webkit-details-marker { display:none; }
   .product-card:nth-child(even) { padding-top:0; }
   .product-visual { height:375px; padding:22px; }
   .stage-type { font-size:2.2rem; line-height:1.04; margin-top:24px; }
-  .stage-flow, .company-flow, .smile-flow { left:20px; right:20px; bottom:52px; }
-  .stage-flow>div, .company-flow>div, .smile-flow>div { font-size:0.72rem; padding:10px 6px; }
+  .stage-flow, .company-flow, .smile-flow, .xpass-flow { left:20px; right:20px; bottom:52px; }
+  .stage-flow>div, .company-flow>div, .smile-flow>div, .xpass-flow>div { font-size:0.72rem; padding:10px 6px; }
   .company-type { font-size:1.85rem; line-height:1.02; margin-top:20px; }
   .company-type svg { right:-13px; width:140px; height:140px; }
   .smile-type { font-size:2.05rem; line-height:1.04; margin-top:22px; }
+  .xpass-type { font-size:1.95rem; line-height:1.04; margin-top:22px; }
   .smile-hero-wrap { width:92px; right:14px; top:70px; }
   .xtage-wordmark-img { width:78px; }
+  .xpass-wordmark-img { width:115px; }
   .stage-badge-wrap { width:76px; right:18px; top:88px; }
   .xpace-company-img { width:135px; }
   .product-meta { margin-top:18px; flex-direction:row; }
